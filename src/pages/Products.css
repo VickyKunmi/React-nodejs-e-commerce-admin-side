@@ -1,0 +1,101 @@
+.containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Pitems {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  
+}
+
+.content {
+  /* background-color: aqua;
+  border-radius: 3px;
+  margin-left: 20px;
+  margin-top: 15px;
+  width: 250px;
+  height: auto; */
+  border-radius: 10px;
+  width: calc(33.33% - 20px); 
+  margin: 10px; 
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  border: solid;
+  border-color: aqua;
+  
+}
+.elements{
+    margin-left: 50px;
+    
+}
+
+.image{
+    width: 70%;
+    
+}
+.img{
+    width: 100%;
+    border-radius: 10px;
+}
+.action{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.product-name{
+    font-size: 20px;
+    color: rgb(77, 105, 131);
+    text-shadow: black;
+}
+.product-supplier{
+    font-size: 14px;
+    color: brown;
+}
+.edit{
+    color: rgb(62, 71, 146);
+    font-size: larger;
+    font-weight: 900;
+}
+.view{
+    color: rgb(38, 148, 212);
+    font-size: larger;
+    font-weight: 900;
+}
+.delete{
+    color: red;
+    font-size: larger;
+    font-weight: 900;
+    cursor: pointer;
+    
+}
+.deletebtn{
+    border: none;
+    background-color: transparent;
+}
+.addbtn{
+    margin-left: 1%;
+    margin-top: 20px;
+    width: 50%;
+    height: 50px;
+    
+}
+.addbtn button {
+    background-color: aqua;
+    font-weight: bolder;
+    width: 20%;
+    border: gold;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.addbtn button:hover{
+    background-color: gray;
+    /* color: black; */
+}
