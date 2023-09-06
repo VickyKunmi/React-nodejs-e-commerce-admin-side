@@ -8,6 +8,8 @@ import Orders from "./pages/Orders";
 import NewProduct from "./pages/NewProduct";
 import EditProduct from "./pages/EditProduct/[id]";
 import ViewProduct from "./pages/ViewProduct/[id]";
+import EditUser from "./pages/EditUser/[id]";
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Route path="/orders" Component={Orders}/>
           <Route path="/NewProduct" Component={NewProduct}/>
           <Route path="/EditProduct/:productId" Component={EditProduct}/>
+          <Route path="/EditUser/:userId" Component={EditUser}/>
           <Route path="/ViewProduct/:productId" Component={ViewProduct}/>
         </Routes>
       </Router>

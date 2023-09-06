@@ -9,7 +9,7 @@
 }
 .home, .products, .users, .orders, .newProduct {
   display: flex;
-  height: 90vh;
+  /* height: 90vh; */
   align-items: center;
   justify-content: center;
   font-style: 3rem;

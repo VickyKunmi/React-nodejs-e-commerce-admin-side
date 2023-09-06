@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../NewProduct.css";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { BiArrowBack } from "react-icons/bi";
 
 function EditProduct() {
   
@@ -85,6 +86,9 @@ function EditProduct() {
 
   return (
     <div className="container">
+      <Link to="/Products" className="back">
+        <BiArrowBack />
+      </Link>
       <h3 className="text">Edit product</h3>
       {isSaved && <div className="alert">Product updated successfully!</div>}
       <div className="items">
