@@ -4,16 +4,27 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as FcIcons from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { useAuth } from "../AuthContext";
+import { useNavigate } from "react-router-dom";
+
 
 function Products() {
   const [products, setProducts] = useState([]);
+  // const [shouldRedirect, setShouldRedirect] = useState(false);
+  const navigate = useNavigate();
+  const {user} = useAuth();
+
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/products/")
+      fetch("http://localhost:3000/api/products/")
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+    }, [user, navigate]);
+
+    
+
+
 
   const handleDelete = (productId) => {
     const shouldDelete = window.confirm(

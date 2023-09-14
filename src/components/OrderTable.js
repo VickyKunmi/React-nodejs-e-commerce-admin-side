@@ -6,7 +6,7 @@ import * as AiIcons from "react-icons/ai";
 import * as FcIcons from "react-icons/fc";
 import { Link } from "react-router-dom";
 
-const Table = ({ columns, data }) => {
+const OrderTable = ({ columns, data }) => {
   return (
     <table className="table">
       <thead>
@@ -21,10 +21,12 @@ const Table = ({ columns, data }) => {
       <tbody>
         {data.map((row, rowIndex) => (
           <tr key={rowIndex}>
-            <td>{rowIndex + 1}</td>
-            <td>{row.username}</td>
-            <td>{row.email}</td>
-            <td>{row.location}</td>
+            <td className="limit-text">{rowIndex + 1}</td>
+            <td className="limit-text">{row.userId}</td>
+            <td className="limit-text">{row.customerId}</td>
+            <td className="limit-text">{row.payment_status}</td>
+            <td>{row.total}</td>
+            <td className="limit-text">{row.createdAt}</td>
             <td>
               <div className="icons">
                 <FcIcons.FcViewDetails className="view" />
@@ -41,4 +43,4 @@ const Table = ({ columns, data }) => {
   );
 };
 
-export default Table;
+export default OrderTable;
